@@ -152,4 +152,4 @@ def sentiment_analysis(selected_user,df):
         for word in message.lower().split():
             if word not in stop_words:
                 words.append(word)
-     return words
+    return words
