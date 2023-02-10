@@ -144,3 +144,31 @@ if uploaded_file is not None:
             fig, ax = plt.subplots()
             ax.pie(emoji_df[1].head(),labels=emoji_df[0].head())
             st.pyplot(fig)
+         import nltk
+    from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+    import nltk
+    nltk.download('vader_lexicon')
+
+    sid = SentimentIntensityAnalyzer()
+
+    for_sentiment = 'a person is a person no matter how small dr seuss i teach the smallest students with the biggest enthusiasm \
+    for learning my students learn in many different ways using all of our senses and multiple intelligences i use a wide range\
+    of techniques to help all my students succeed students in my class come from a variety of different backgrounds which makes\
+    for wonderful sharing of experiences and cultures including native americans our school is a caring community of successful \
+    learners which can be seen through collaborative student project based learning in and out of the classroom kindergarteners \
+    in my class love to work with hands on materials and have many different opportunities to practice a skill before it is\
+    mastered having the social skills to work cooperatively with friends is a crucial aspect of the kindergarten curriculum\
+    montana is the perfect place to learn about agriculture and nutrition my students love to role play in our pretend kitchen\
+    in the early childhood classroom i have had several kids ask me can we try cooking with real food i will take their idea \
+    and create common core cooking lessons where we learn important math and writing concepts while cooking delicious healthy \
+    food for snack time my students will have a grounded appreciation for the work that went into making the food and knowledge \
+    of where the ingredients came from as well as how it is healthy for their bodies this project would expand our learning of \
+    nutrition and agricultural cooking recipes by having us peel our own apples to make homemade applesauce make our own bread \
+    and mix up healthy plants from our classroom garden in the spring we will also create our own cookbooks to be printed and \
+    shared with families students will gain math and literature skills as well as a life long enjoyment for healthy cooking \
+    nannan'
+    ss = sid.polarity_scores(for_sentiment)
+
+    for k in ss:
+        print('{0}: {1}, '.format(k, ss[k]), end='')
