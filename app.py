@@ -161,7 +161,7 @@ if uploaded_file is not None:
         for_sentiment = 'a person is a person no matter how small dr seuss i teach the smallest students with the biggest enthusiasm'
 
         # Read the chat messages from a file or user input
-        messages = st.text_area("Enter your WhatsApp chat messages", "")
+        messages = st.text_area("Enter your WhatsApp chat messages", for_sentiment)
 
         # Perform sentiment analysis on the messages
         sentiments = []
