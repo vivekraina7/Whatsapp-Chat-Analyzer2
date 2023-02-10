@@ -2,6 +2,11 @@ import streamlit as st
 import preprocessor, helper
 import matplotlib.pyplot as plt
 import seaborn as sns
+import re
+import nltk
+from nltk.sentiment import SentimentIntensityAnalyzer
+import streamlit as st
+from textblob import TextBlob
 
 st.sidebar.title('Whatsapp Chat Analyzer')
 
@@ -169,7 +174,17 @@ if uploaded_file is not None:
         and mix up healthy plants from our classroom garden in the spring we will also create our own cookbooks to be printed and \
         shared with families students will gain math and literature skills as well as a life long enjoyment for healthy cooking \
         nannan'
-        ss = sid.polarity_scores(for_sentiment)
 
-        for k in ss:
-            st.title('{0}: {1}, '.format(k, ss[k]), end='')
+        # Read the chat messages from a file or user input
+        messages = st.text_area("Enter your WhatsApp chat messages", for_sentiment)
+
+        # Perform sentiment analysis on the messages
+        if st.button("Analyze Sentiments"):
+            sentiments = []
+            for message in messages.splitlines():
+                sentiment = TextBlob(message).sentiment.polarity
+                sentiments.append(sentiment)
+
+            # Display the sentiment results
+            st.write("Sentiment Results:")
+            st.write(sentiments)
