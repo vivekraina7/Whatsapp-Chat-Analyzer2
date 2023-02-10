@@ -169,21 +169,7 @@ if uploaded_file is not None:
     and mix up healthy plants from our classroom garden in the spring we will also create our own cookbooks to be printed and \
     shared with families students will gain math and literature skills as well as a life long enjoyment for healthy cooking \
     nannan'
-    
-    essay_neg = []
-    essay_neu = []
-    essay_pos = []
-    essay_com = []
-    for sentiment in for_sentiment:
-      ss = sid.polarity_scores(sentiment)
-      for k in ss:
-        if k == 'neg':
-          essay_neg.append(ss[k])
-        elif k == 'neu':
-          essay_neu.append(ss[k])
-        elif k == 'pos':
-          essay_pos.append(ss[k])
-        else:
-          essay_com.append(ss[k])
-    st.title(essay_neg)
-    st.title(essay_neu)
+    ss = sid.polarity_scores(for_sentiment)
+
+    for k in ss:
+        st.title('{0}: {1}, '.format(k, ss[k]), end='')
