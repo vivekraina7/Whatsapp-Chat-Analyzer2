@@ -168,6 +168,12 @@ if uploaded_file is not None:
         for message in messages.splitlines():
             sentiment = TextBlob(message).sentiment.polarity
             sentiments.append(sentiment)
+            if sentiment >= 0.05:
+                sentiments.append("positive")
+            elif sentiment <= -0.05:
+                sentiments.append("negative")
+            else:
+                sentiments.append("neutral")
 
         # Display the sentiment results
         st.write("Sentiment Results:")
