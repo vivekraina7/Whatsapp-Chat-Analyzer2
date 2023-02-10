@@ -172,4 +172,4 @@ if uploaded_file is not None:
     ss = sid.polarity_scores(for_sentiment)
 
     for k in ss:
-        print('{0}: {1}, '.format(k, ss[k]), end='')
+        st.title(print('{0}: {1}, '.format(k, ss[k]), end=''))
