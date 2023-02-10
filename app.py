@@ -144,7 +144,8 @@ if uploaded_file is not None:
             fig, ax = plt.subplots()
             ax.pie(emoji_df[1].head(),labels=emoji_df[0].head())
             st.pyplot(fig)
-         import nltk
+    
+    import nltk
     from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
     import nltk
