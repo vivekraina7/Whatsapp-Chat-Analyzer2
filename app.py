@@ -154,6 +154,8 @@ if uploaded_file is not None:
         from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
         # import nltk
+        wordsss = helper.sentiment_analysis(selected_user,df)
+
         nltk.download('vader_lexicon')
 
         sid = SentimentIntensityAnalyzer()
@@ -161,7 +163,7 @@ if uploaded_file is not None:
         for_sentiment = 'a person is a person no matter how small dr seuss i teach the smallest students with the biggest enthusiasm'
 
         # Read the chat messages from a file or user input
-        messages = st.text_area("Enter your WhatsApp chat messages", for_sentiment)
+        messages = st.text_area("Enter your WhatsApp chat messages", wordsss)
 
         # Perform sentiment analysis on the messages
         sentiments = []
