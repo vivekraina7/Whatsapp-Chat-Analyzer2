@@ -1,7 +1,7 @@
 # whatsapp-chat-analyzer📊
 
 ## Data Analysis Project: WhatsApp Chat Analyzer and Web Deployment
-### Live App : (Whatsapp Chat Analyzer)[https://vivekraina7-whatsapp-chat-analyzer2-app-xcfgu8.streamlit.app]
+### Live App : [Whatsapp Chat Analyzer](https://vivekraina7-whatsapp-chat-analyzer2-app-xcfgu8.streamlit.app)
 
 1. Developed a data analysis project to analyze WhatsApp chats and visualize chat data using Python programming language and Streamlit web framework.
 2. Preprocessed the chat data, extracted important features like message sender, message text, and time stamp, and cleaned the data to prepare it for analysis.
