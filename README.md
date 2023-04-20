@@ -1,5 +1,4 @@
 # whatsapp-chat-analyzer📊
-
 ## Data Analysis Project: WhatsApp Chat Analyzer and Web Deployment
 ### Live App : [Whatsapp Chat Analyzer](https://vivekraina7-whatsapp-chat-analyzer2-app-xcfgu8.streamlit.app)
 
